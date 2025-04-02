@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login UVA</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            list-style-type: none;
+            outline: none;
+        }
+
+        :root{
+            --verde-claro: #12a969;
+            --verde-escuro: #048449;
+            --branco-verde: #ecfff0;
+            --verde: #006633;
+        }
+
+        body{
+            height: 100vh;
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header{
+            background-color: var(--verde);
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 10px;
+            width: 100%;
+        }
+        
+        header p{
+            color: white;
+            font-size: 0.9em;
+        }
+
+
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: space-evenly;
+            height: 100%;
+            max-width: 700px;
+            padding: 0 20px;
+        }
+
+        .head h1{
+            font-size: 1.4em;
+            margin: 10px 0px;
+        }
+
+        .head h2{
+            margin-top: 5px;
+            font-size: 1.3em;
+        }
+        section.login{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px 0px;
+            outline: 2px solid #048449;
+            padding: 20px;
+        }
+
+        section.formulario{
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0px;
+        }
+
+        section.conectado{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        label{
+            text-align: left;
+            font-size: 0.9em;
+        }
+
+        input[type="text"], input[type="password"]{
+            border: 1px solid var(--verde-claro);
+            padding: 5px;
+            margin: 2px 0px;
+            border-radius: 3px;
+            width: 200px;
+            background-color: var(--branco-verde);
+        }
+
+        input[type="submit"]{
+            padding: 10px 0px;
+            cursor: pointer;
+            background-color: var(--verde);
+            color: white;
+            margin: 8px 0px 0px 0px;
+            border-radius: 3px;
+        }
+
+        input[type="submit"]:hover{
+            background-color: var(--verde-escuro);
+        }
+        
+        input[type="checkbox"]{
+            margin-right: 3px;
+            accent-color: var(--verde);
+        }
+
+        .conectado label{
+            font-size: 0.9em;
+        }
+
+        .info {
+            margin: 3px 0px 20px 0px;
+            font-size: 0.8em;
+        }
+
+        a{
+            margin: 0px 0px 0px 0px;
+            color: var(--verde);
+            padding-bottom: 5px;
+        }
+
+        a:hover{
+            text-decoration: underline;
+            color: var(--verde-escuro);
+        }
+        
+        footer{
+            background-color: var(--verde);
+            padding: 10px;
+            width: 100%;
+        }
+
+        footer p{
+            text-align: center;
+            color: white;
+        }
+
+        @media screen and (min-width: 810px){
+            main{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                min-width: 800px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p>02/04/2025, quarta-feira</p>
+        <img width="130px" src="./imagens/brasao_govCE.png" alt="Brasão Governo do Estado do Ceará">
+    </header>
+    <main>
+        <section class="head">
+            <img width="300px" src="./imagens/brasao.jpg" alt="Brasão da UVA">
+            <h1>Sistema de Autenticação de Usuários</h1>
+            <h2>Módulo Aluno</h2>
+        </section>
+        <section class="login">
+            <h2>Login</h2>
+            <section class="formulario">
+                <label for="iusuario">Usuário:</label>
+                <input type="text" name="usuario" id="iusuario" autocomplete="username" maxlength="30" required>
+                <label for="isenha">Senha:</label>
+                <input type="password" name="senha" id="isenha" autocomplete="current-password" maxlength="30" required>
+                <input type="submit" value="Entrar">
+            </section>
+            <section class="conectado">
+                <input type="checkbox" name="conectado" id="iconectado">
+                <label for="iconectado">Ficar sempre conectado</label>
+            </section>
+            <p class="info">(Não recomendado para computadores públicos)</p>
+            <a href="">Esqueceu sua senha?</a>
+            <a href="">Não é cadastrado? Cadastre-se</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Universidade Estadual Vale do Acaraú</p>
+    </footer>
+</body>
+</html>
