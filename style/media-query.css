@@ -1,0 +1,9 @@
+@media screen and (min-width: 810px){
+    main{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 800px;
+    }
+}
